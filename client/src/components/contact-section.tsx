@@ -29,28 +29,31 @@ function ContactSection() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // important to prevent page reload
-    setIsSubmitting(true);
+  e.preventDefault(); 
+  setIsSubmitting(true);
 
-    try {
-      const res = await fetch("http://localhost:5000/send", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-      const data = await res.json();
+  try {
+    // Use relative path instead of localhost
+    const res = await fetch("/api/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
 
-      if (data.success) {
-        setIsSubmitted(true);
-        setFormData({ name: "", email: "", subject: "", message: "" });
-        setTimeout(() => setIsSubmitted(false), 3000);
-      }
-    } catch (err) {
-      console.error(err);
-    } finally {
-      setIsSubmitting(false);
+    const data = await res.json();
+
+    if (data.success) {
+      setIsSubmitted(true);
+      setFormData({ name: "", email: "", subject: "", message: "" });
+      setTimeout(() => setIsSubmitted(false), 3000);
     }
-  };
+  } catch (err) {
+    console.error(err);
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
 
   const contactMethods = [
     {
