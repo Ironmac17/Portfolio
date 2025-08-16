@@ -6,33 +6,28 @@ const resumeHighlights = [
   {
     icon: GraduationCap,
     title: "Education",
-    items: ["B.Tech Computer Science Engineering", "CGPA: 9.2/10 (Current)", "Expected Graduation: 2025"],
-  },
-  {
-    icon: Briefcase,
-    title: "Experience",
-    items: [
-      "Software Development Intern - TechCorp (Summer 2024)",
-      "Full Stack Developer - College Tech Society",
-      "Freelance Web Developer (2023-Present)",
-    ],
+    items: ["B.Tech Computer Science Engineering", "CGPA: 9.34/10 (Current)", "Expected Graduation: 2027"],
   },
   {
     icon: Award,
     title: "Certifications",
-    items: ["AWS Cloud Practitioner", "Google Cloud Associate", "Meta Frontend Developer Certificate"],
+    items: ["Supervised Machine Learning"],
   },
 ]
 
 export function ResumeSection() {
+  const RESUME_URL =
+    "https://github.com/Ironmac17/Resume_Nimish/blob/a3185f23141c628923aee6dfb1e1977e7e975ede/Nimish_Agrawal_Resume.pdf.pdf"
+
   const handleDownload = () => {
-    // In a real app, this would trigger a download
-    console.log("[v0] Resume download triggered")
+    const link = document.createElement("a")
+    link.href = RESUME_URL
+    link.download = "Nimish_Agrawal_Resume.pdf"
+    link.click()
   }
 
   const handlePreview = () => {
-    // In a real app, this would open a preview modal
-    console.log("[v0] Resume preview triggered")
+    window.open(RESUME_URL, "_blank")
   }
 
   return (
@@ -80,7 +75,7 @@ export function ResumeSection() {
           </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
           {resumeHighlights.map((section, index) => (
             <motion.div
               key={index}
@@ -129,23 +124,18 @@ export function ResumeSection() {
             <div>
               <h4 className="text-green-400 font-semibold mb-2">Technical Skills</h4>
               <p className="text-slate-300 mb-4">
-                JavaScript, TypeScript, React, Node.js, Python, Java, SQL, MongoDB, AWS, Docker, Git
+                C/C++, DBMS,JavaScript, TypeScript, React, Node.js, Python, MongoDB,Express
               </p>
 
               <h4 className="text-green-400 font-semibold mb-2">Key Projects</h4>
               <p className="text-slate-300">
-                E-commerce platform, AI chatbot, Real-time collaboration tool, Mobile expense tracker
+                PhatomPost- Anonymous posting , RenuKiranFoundation, Job Portal , Social Media App Design
               </p>
             </div>
 
             <div>
-              <h4 className="text-green-400 font-semibold mb-2">Achievements</h4>
-              <p className="text-slate-300 mb-4">
-                Dean's List, Hackathon Winner, Open Source Contributor, Research Publication
-              </p>
-
               <h4 className="text-green-400 font-semibold mb-2">Languages</h4>
-              <p className="text-slate-300">English (Fluent), Hindi (Native), Spanish (Intermediate)</p>
+              <p className="text-slate-300">English (Fluent), Hindi (Native)</p>
             </div>
           </div>
         </motion.div>
