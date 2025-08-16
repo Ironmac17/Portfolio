@@ -1,22 +1,22 @@
-import { motion } from "framer-motion"
-import { useInView } from "framer-motion"
-import { useRef } from "react"
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 export function AboutSection() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-20 bg-card/50" ref={ref}>
+    <section id="about" className="py-32 bg-card/50" ref={ref}>
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto"
+          className="w-full"
         >
           <motion.h2
-            className="text-4xl md:text-5xl font-bold text-center mb-12"
+            className="text-5xl md:text-6xl font-bold text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -24,28 +24,32 @@ export function AboutSection() {
             About <span className="text-primary">Me</span>
           </motion.h2>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <div className="relative">
-                <div className="w-80 h-80 mx-auto rounded-full bg-gradient-to-br from-primary to-secondary p-1">
+                <div className="w-96 h-96 mx-auto rounded-full bg-gradient-to-br from-primary to-secondary p-1">
                   <div className="w-full h-full rounded-full bg-card flex items-center justify-center">
                     <img
-                      src="/placeholder.svg?height=300&width=300"
+                      src="/placeholder.svg?height=350&width=350"
                       alt="Profile"
-                      className="w-72 h-72 rounded-full object-cover"
+                      className="w-88 h-88 rounded-full object-cover"
                     />
                   </div>
                 </div>
                 <motion.div
-                  className="absolute -top-4 -right-4 w-16 h-16 bg-primary rounded-full flex items-center justify-center"
+                  className="absolute -top-6 -right-6 w-20 h-20 bg-primary rounded-full flex items-center justify-center"
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 10, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+                  transition={{
+                    duration: 10,
+                    repeat: Number.POSITIVE_INFINITY,
+                    ease: "linear",
+                  }}
                 >
-                  <span className="text-2xl">⚽</span>
+                  <span className="text-3xl">⚽</span>
                 </motion.div>
               </div>
             </motion.div>
@@ -54,38 +58,28 @@ export function AboutSection() {
               initial={{ opacity: 0, x: 50 }}
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="space-y-6"
+              className="space-y-10"
             >
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Like a dedicated athlete training for the championship, I approach development with
+              <p className="text-xl leading-relaxed text-muted-foreground">
+                Like a strategist on the field,
                 <span className="text-primary font-semibold">
                   {" "}
-                  discipline, precision, and relentless pursuit of excellence
-                </span>
-                . Every line of code is crafted with the same attention to detail that separates good players from great
-                ones.
+                  I approach engineering with creativity, logic, and precision.
+                </span>{" "}
+                Frontend development is where I turn ideas into interactive,
+                user-friendly experiences, powered by clean and efficient code.
+                My journey in Computer Engineering has also fueled a strong
+                interest in AI/ML, where I explore how intelligent systems can
+                make technology smarter and more impactful. With a keen eye for
+                UI/UX design, I ensure that everything I build doesn’t just
+                work—it feels intuitive and engaging. Driven by curiosity and
+                hands-on projects, I focus on learning, experimenting, and
+                crafting solutions that merge functionality with experience.
               </p>
-
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                With <span className="text-secondary font-semibold">5+ years</span> of experience in full-stack
-                development, I've mastered the art of building scalable applications that perform under pressure. My
-                toolkit includes React, Node.js, TypeScript, and modern cloud technologies.
-              </p>
-
-              <div className="grid grid-cols-2 gap-4 pt-6">
-                <div className="text-center p-4 bg-background rounded-lg border border-primary/20">
-                  <div className="text-2xl font-bold text-primary">50+</div>
-                  <div className="text-sm text-muted-foreground">Projects Completed</div>
-                </div>
-                <div className="text-center p-4 bg-background rounded-lg border border-secondary/20">
-                  <div className="text-2xl font-bold text-secondary">5+</div>
-                  <div className="text-sm text-muted-foreground">Years Experience</div>
-                </div>
-              </div>
             </motion.div>
           </div>
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
