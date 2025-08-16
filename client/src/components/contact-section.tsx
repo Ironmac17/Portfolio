@@ -133,7 +133,7 @@ function ContactSection() {
               <div className="flex gap-3">
                 {/* GitHub */}
                 <a
-                  href="https://github.com/nimish4agrawal"
+                  href="https://github.com/Ironmac17"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-lg bg-card border border-border hover:border-transparent flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 hover:bg-gray-900 hover:shadow-lg hover:shadow-gray-900/30 group"
@@ -144,7 +144,7 @@ function ContactSection() {
 
                 {/* LinkedIn */}
                 <a
-                  href="https://linkedin.com/in/nimish-agrawal"
+                  href="https://www.linkedin.com/in/nimish-agrawal-31388b293/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-lg bg-card border border-border hover:border-transparent flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-600/30 group"
@@ -155,7 +155,7 @@ function ContactSection() {
 
                 {/* LeetCode */}
                 <a
-                  href="https://leetcode.com/nimish4agrawal"
+                  href="https://leetcode.com/u/IronMac17/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-lg bg-card border border-border hover:border-transparent flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 hover:bg-orange-500 hover:shadow-lg hover:shadow-orange-500/30 group"

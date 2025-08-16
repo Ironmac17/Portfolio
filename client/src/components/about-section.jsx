@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-
+import { Github, Linkedin } from "lucide-react";
 export function AboutSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -76,6 +76,31 @@ export function AboutSection() {
                 hands-on projects, I focus on learning, experimenting, and
                 crafting solutions that merge functionality with experience.
               </p>
+
+              {/* Small Boxes for GitHub & LinkedIn */}
+              <div className="flex gap-4 mt-4 justify-center md:justify-start">
+                {/* GitHub Box */}
+                <a
+                  href="https://github.com/nimish4agrawal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-16 h-16 bg-card border border-border rounded-lg flex items-center justify-center hover:scale-105 transition-transform duration-300"
+                  title="GitHub"
+                >
+                  <Github className="w-6 h-6 text-muted-foreground group-hover:text-white transition-colors duration-300" />
+                </a>
+
+                {/* LinkedIn Box */}
+                <a
+                  href="https://linkedin.com/in/nimish-agrawal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-16 h-16 bg-card border border-border rounded-lg flex items-center justify-center hover:scale-105 transition-transform duration-300"
+                  title="LinkedIn"
+                >
+                  <Linkedin className="w-6 h-6 text-muted-foreground group-hover:text-white transition-colors duration-300" />
+                </a>
+              </div>
             </motion.div>
           </div>
         </motion.div>
