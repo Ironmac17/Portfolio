@@ -1,20 +1,26 @@
 {
-  "name": "server",
+  "name": "portfolio-server",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Backend server for portfolio website",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon server.js"
   },
-  "keywords": [],
+  "keywords": ["express", "nodejs", "backend"],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^17.2.1",
-    "express": "^5.1.0",
-    "nodemailer": "^7.0.5"
+    "cors": "2.8.5",
+    "dotenv": "16.4.5",
+    "express": "4.21.2",
+    "nodemailer": "6.9.13"
+  },
+  "devDependencies": {
+    "nodemon": "3.0.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
