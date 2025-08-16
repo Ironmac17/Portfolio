@@ -72,7 +72,7 @@ function ContactSection() {
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Alwar, Rajasthan, India",
       href: "#",
       bgColor: "bg-primary/10",
       iconColor: "text-primary",

@@ -4,45 +4,46 @@ import { useRef, useState } from "react";
 import { Button } from "./ui/button";
 import { ExternalLink, Github } from "lucide-react";
 
+
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "Job Portal",
     description:
-      "Full-stack e-commerce solution with React, Node.js, and Stripe integration",
-    image: "/placeholder.svg?height=300&width=400",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    github: "#",
-    live: "#",
+      "Full-stack job portal solution with React, Node.js, Express ,Clerk",
+    image: "/assets/jobportal.jpg",
+    tech: ["React", "Node.js", "MongoDB", "Express", "Clerk"],
+    github: "https://github.com/Ironmac17/JobPortal",
+    live: "job-portal-silk-phi.vercel.app",
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "Collaborative project management tool with real-time updates",
+    title: "PhantomPost",
+    description: "Anonymous social media platform with optional username visibility and real-time messaging.",
     image: "/placeholder.svg?height=300&width=400",
-    tech: ["Next.js", "TypeScript", "Prisma", "Socket.io"],
-    github: "#",
-    live: "#",
+    tech: ["Node.js", "TypeScript", "MongoDB", "Socket.io"],
+    github: "https://github.com/Ironmac17/PhantomPost",
+    live: "https://github.com/Ironmac17/PhantomPost",
   },
-  {
-    id: 3,
-    title: "AI Chat Application",
-    description:
-      "Intelligent chatbot with natural language processing capabilities",
-    image: "/placeholder.svg?height=300&width=400",
-    tech: ["React", "Python", "OpenAI", "FastAPI"],
-    github: "#",
-    live: "#",
-  },
-  {
-    id: 4,
-    title: "Fitness Tracker",
-    description: "Mobile-first fitness tracking app with workout analytics",
-    image: "/placeholder.svg?height=300&width=400",
-    tech: ["React Native", "Firebase", "Chart.js"],
-    github: "#",
-    live: "#",
-  },
+  // {
+  //   id: 3,
+  //   title: "AI Chat Application",
+  //   description:
+  //     "Intelligent chatbot with natural language processing capabilities",
+  //   image: "/placeholder.svg?height=300&width=400",
+  //   tech: ["React", "Python", "OpenAI", "FastAPI"],
+  //   github: "#",
+  //   live: "#",
+  // },
+  // {
+  //   id: 4,
+  //   title: "Fitness Tracker",
+  //   description: "Mobile-first fitness tracking app with workout analytics",
+  //   image: "/placeholder.svg?height=300&width=400",
+  //   tech: ["React Native", "Firebase", "Chart.js"],
+  //   github: "#",
+  //   live: "#",
+  // },
 ];
 
 export function ProjectsSection() {

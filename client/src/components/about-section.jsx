@@ -81,7 +81,7 @@ export function AboutSection() {
               <div className="flex gap-4 mt-4 justify-center md:justify-start">
                 {/* GitHub Box */}
                 <a
-                  href="https://github.com/nimish4agrawal"
+                  href="https://github.com/Ironmac17"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-16 h-16 bg-card border border-border rounded-lg flex items-center justify-center hover:scale-105 transition-transform duration-300"
@@ -92,7 +92,7 @@ export function AboutSection() {
 
                 {/* LinkedIn Box */}
                 <a
-                  href="https://linkedin.com/in/nimish-agrawal"
+                  href="https://www.linkedin.com/in/nimish-agrawal-31388b293/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-16 h-16 bg-card border border-border rounded-lg flex items-center justify-center hover:scale-105 transition-transform duration-300"

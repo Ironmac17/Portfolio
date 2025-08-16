@@ -51,7 +51,7 @@ export function Navigation() {
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <motion.div whileHover={{ scale: 1.05 }} className="text-xl font-bold text-primary">
-            B.Tech Portfolio
+            NIMISH 
           </motion.div>
 
           <div className="hidden lg:flex space-x-6">
