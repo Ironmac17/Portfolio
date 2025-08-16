@@ -14,6 +14,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json());
 
+// Contact form route
 app.post("/send", async (req, res) => {
   const { name, email, subject, message } = req.body;
 
@@ -47,11 +48,12 @@ app.post("/send", async (req, res) => {
 });
 
 // Serve React frontend
-app.use(express.static(path.join(__dirname, '../client/dist')));
+const clientBuildPath = path.resolve(__dirname, '../client/dist');
+app.use(express.static(clientBuildPath));
 
 // Catch-all route for SPA
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(clientBuildPath, 'index.html'));
 });
 
 // Start server
