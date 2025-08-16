@@ -9,15 +9,20 @@ dotenv.config();
 const app = express();
 
 // Middlewares
-app.use(cors());
+app.use(cors({
+  origin: process.env.NODE_ENV === 'production' 
+    ? process.env.CLIENT_URL || 'https://your-app-name.onrender.com'
+    : ['http://localhost:3000', 'http://localhost:5173', 'http://127.0.0.1:5173'],
+  credentials: true
+}));
 app.use(express.json()); // Built-in JSON parser
 
-// Contact form route
-app.post("/send", async (req, res) => {
+// API routes (define BEFORE static files)
+app.post("/api/send", async (req, res) => {
   const { name, email, subject, message } = req.body;
 
   try {
-    const transporter = nodemailer.createTransport({
+    const transporter = nodemailer.createTransporter({
       service: "gmail",
       auth: {
         user: process.env.EMAIL_USER,
@@ -45,12 +50,12 @@ app.post("/send", async (req, res) => {
   }
 });
 
-// Serve React frontend
+// Serve React frontend (static files)
 const clientBuildPath = path.resolve(__dirname, '../client/dist');
 app.use(express.static(clientBuildPath));
 
-// Catch-all route for SPA
-app.get('/*', (req, res) => {
+// Catch-all route for SPA (FIXED - use * instead of /*)
+app.get('*', (req, res) => {
   res.sendFile(path.join(clientBuildPath, 'index.html'));
 });
 
