@@ -1,11 +1,9 @@
-import express from "express";
-import cors from "cors";
-import nodemailer from "nodemailer";
-import dotenv from "dotenv";
-import bodyParser from "body-parser";
-import path from "path";
-import { fileURLToPath } from "url";
-
+const express = require("express");
+const cors = require("cors");
+const nodemailer = require("nodemailer");
+const dotenv = require("dotenv");
+const bodyParser = require("body-parser");
+const path = require("path");
 dotenv.config();
 
 const app = express();
