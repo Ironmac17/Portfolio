@@ -1,49 +1,38 @@
 "use client"
 import { motion } from "framer-motion"
-import { Trophy, Award, Star, Target, Zap, Medal } from "lucide-react"
+import { Trophy, Award, Star, Target, Zap, Medal, Users, Briefcase } from "lucide-react"
 
 const achievements = [
   {
-    icon: Trophy,
-    title: "Dean's List",
-    description: "Maintained 9.2+ CGPA for 4 consecutive semesters",
-    year: "2022-2024",
-    color: "from-yellow-400 to-yellow-600",
-  },
-  {
-    icon: Award,
-    title: "Hackathon Winner",
-    description: "1st Place in TechFest 2024 - Built AI-powered study assistant",
-    year: "2024",
-    color: "from-blue-400 to-blue-600",
-  },
-  {
-    icon: Star,
-    title: "Open Source Contributor",
-    description: "500+ contributions on GitHub, maintained 3 popular repositories",
-    year: "2023-2024",
-    color: "from-green-400 to-green-600",
+    icon: Users,
+    title: "SATURNALIA'24 Cultural Fest",
+    description:
+      "Core Member – Led sponsorship outreach securing funds from local businesses, managed on-ground operations, and collaborated with vendors, artists, and stakeholders.",
+    year: "Oct–Nov 2024",
+    color: "from-pink-400 to-pink-600",
   },
   {
     icon: Target,
-    title: "Coding Competition",
-    description: "Top 50 in Google Code Jam, solved 200+ LeetCode problems",
-    year: "2023",
-    color: "from-purple-400 to-purple-600",
+    title: "URJA'25 Sports Fest",
+    description:
+      "Executive Committee Member – Secured sponsorships, managed logistics and operations, and mentored juniors in marketing and outreach.",
+    year: "Dec 2024 – Feb 2025",
+    color: "from-blue-400 to-blue-600",
   },
   {
-    icon: Zap,
-    title: "Technical Lead",
-    description: "Led development team of 8 students in college tech society",
-    year: "2023-2024",
-    color: "from-orange-400 to-orange-600",
+    icon: Award,
+    title: "JP Morgan Code for Good’25",
+    description:
+      "Selected for Code for Good 2025 by JPMorgan Chase from 50,000+ applicants, recognizing top student tech talent across India.",
+    year: "2025",
+    color: "from-green-400 to-green-600",
   },
   {
-    icon: Medal,
-    title: "Research Paper",
-    description: "Published paper on ML algorithms in IEEE conference",
-    year: "2024",
-    color: "from-red-400 to-red-600",
+    icon: Trophy,
+    title: "Academic Excellence",
+    description: "Maintained 9.3 CGPA across 4 semesters, consistently ranking among the top performers.",
+    year: "2022–2025",
+    color: "from-yellow-400 to-yellow-600",
   },
 ]
 

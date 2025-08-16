@@ -1,51 +1,45 @@
 "use client"
 import { motion } from "framer-motion"
-import { Gamepad2, Music, Camera, Book, Dumbbell, Code } from "lucide-react"
+import { Dumbbell, Code, Megaphone, Medal, Plane } from "lucide-react"
 
 const hobbies = [
   {
-    icon: Gamepad2,
-    title: "Gaming",
-    description: "Strategy games and competitive esports - sharpens problem-solving skills",
+    icon: Plane,
+    title: "Traveling",
+    description: "Exploring new places, cultures, and experiences – keeps me inspired and open-minded",
     image: "/placeholder.svg?height=200&width=300",
-    skills: ["Strategic thinking", "Quick decision making", "Team coordination"],
-  },
-  {
-    icon: Music,
-    title: "Music Production",
-    description: "Creating beats and electronic music using FL Studio and Ableton",
-    image: "/placeholder.svg?height=200&width=300",
-    skills: ["Creativity", "Audio engineering", "Pattern recognition"],
-  },
-  {
-    icon: Camera,
-    title: "Photography",
-    description: "Capturing moments and experimenting with digital art and photo editing",
-    image: "/placeholder.svg?height=200&width=300",
-    skills: ["Visual composition", "Adobe Creative Suite", "Attention to detail"],
-  },
-  {
-    icon: Book,
-    title: "Tech Reading",
-    description: "Always learning - from sci-fi novels to technical documentation",
-    image: "/placeholder.svg?height=200&width=300",
-    skills: ["Continuous learning", "Research skills", "Knowledge synthesis"],
+    skills: ["Adaptability", "Curiosity", "Cultural awareness"],
   },
   {
     icon: Dumbbell,
-    title: "Fitness",
-    description: "Regular gym sessions and outdoor sports - keeps the mind sharp",
+    title: "Sports",
+    description: "Volleyball, cricket, football, and regular gym sessions – Inter-hostel winner in all three",
     image: "/placeholder.svg?height=200&width=300",
-    skills: ["Discipline", "Goal setting", "Physical endurance"],
+    skills: ["Discipline", "Teamwork", "Physical endurance"],
   },
   {
     icon: Code,
     title: "Side Projects",
-    description: "Building random apps and experimenting with new technologies",
+    description: "Building apps like PhantomPost, portfolio websites, and experimenting with new tech",
     image: "/placeholder.svg?height=200&width=300",
     skills: ["Innovation", "Full-stack development", "Problem solving"],
   },
+  {
+    icon: Megaphone,
+    title: "Marketing & Leadership",
+    description: "Head of Marketing for cultural fests, leading sponsorships and mentoring juniors",
+    image: "/placeholder.svg?height=200&width=300",
+    skills: ["Networking", "Negotiation", "Leadership"],
+  },
+  {
+    icon: Medal,
+    title: "Competitive Coding",
+    description: "Solved 200+ LeetCode problems, participated in Code Jam & hackathons",
+    image: "/placeholder.svg?height=200&width=300",
+    skills: ["Algorithms", "Dynamic Programming", "Problem Solving"],
+  },
 ]
+
 
 export function HobbiesSection() {
   return (
