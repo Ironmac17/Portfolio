@@ -2,7 +2,6 @@ const express = require("express");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 const dotenv = require("dotenv");
-const bodyParser = require("body-parser");
 const path = require("path");
 
 dotenv.config();
@@ -11,8 +10,7 @@ const app = express();
 
 // Middlewares
 app.use(cors());
-app.use(bodyParser.json());
-app.use(express.json());
+app.use(express.json()); // Built-in JSON parser
 
 // Contact form route
 app.post("/send", async (req, res) => {
