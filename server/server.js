@@ -4,24 +4,16 @@ const nodemailer = require("nodemailer");
 const dotenv = require("dotenv");
 const bodyParser = require("body-parser");
 const path = require("path");
+
 dotenv.config();
 
 const app = express();
-
-// For __dirname in ES modules
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 // Middlewares
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json());
 
-// Debug environment variables
-console.log("EMAIL_USER:", process.env.EMAIL_USER);
-console.log("EMAIL_PASS length:", process.env.EMAIL_PASS?.length);
-
-// Contact form route
 app.post("/send", async (req, res) => {
   const { name, email, subject, message } = req.body;
 
@@ -56,6 +48,8 @@ app.post("/send", async (req, res) => {
 
 // Serve React frontend
 app.use(express.static(path.join(__dirname, '../client/dist')));
+
+// Catch-all route for SPA
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/dist/index.html'));
 });
